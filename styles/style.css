@@ -13,6 +13,7 @@ body {
   height: 100vh;
   font-family: 'agency fb';
   background: #f7f8fe;
+  overflow-x: hidden;
 }
 
 .container {
@@ -32,7 +33,7 @@ body {
   justify-content: space-between;
 }
 
-#main {
+.main {
   background-image: url(../images/medicine.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -79,6 +80,10 @@ body {
   color: #fff;
 }
 
+.knowledge .title-knowledge-mobile {
+  display: none;
+}
+
 .knowledge-content__item__container {
   margin-left: 1rem;
 }
@@ -98,7 +103,7 @@ body {
   margin: 6rem 0;
 }
 
-.contact-me__image-contatainer img {
+.contact-me__image-container img {
   max-width: 300px;
   margin: 0 2.5rem 0 5rem;
 }
@@ -108,13 +113,21 @@ body {
   width: 100%;
 }
 
+.contact-me__input-container--input textarea {
+  height: 200px;
+}
+
+.contact-me__input-container--input select {
+  width: 100%;
+}
+
 .contact-me__input-container form {
   width: 100%;
 }
 
 input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
+  width: calc(100% - 12px);
+  padding: 12px 0 12px 12px;
   border: 1px solid #ccc;
   resize: vertical;
 }
@@ -131,6 +144,10 @@ input[type=submit] {
   border: none;
   cursor: pointer;
   float: right;
+}
+
+.submit-row {
+  margin-top: 1rem;
 }
 
 input[type=submit]:hover {
@@ -155,13 +172,6 @@ input[type=submit]:hover {
   content: "";
   display: table;
   clear: both;
-}
-
-@media screen and (max-width: 600px) {
-  .contact-me__input-container--label, .contact-me__input-container--input, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
 }
 
 h3 {
@@ -554,7 +564,7 @@ ul {
 }
 
 @media screen and (max-width: 1020px) {
-  #main {
+  .main {
     background-color: #D0D0D0;
     background-color: -moz-linear-gradient(135deg, rgba(166,166,166,1) 25%, rgba(217,217,217,1) 75%);
     background-color: -webkit-linear-gradient(135deg, rgba(166,166,166,1) 25%, rgba(217,217,217,1) 75%);
@@ -565,9 +575,18 @@ ul {
     background-size: contain;
     background-position-y: initial;
   }
+  .container {
+    padding: 3rem 0;
+  }
   .container-width {
     margin-left: 20px;
     margin-right: 20px;
+  }
+  .scrolldown {
+    display: none;
+  }
+  .media {
+    bottom: 0;
   }
   .wrapper .text {
     display: none;
@@ -589,6 +608,67 @@ ul {
     font-size: 20px;
     letter-spacing: 2px;
   }
+  .container-middle {
+    display: block;
+  }
+  .title-block {
+    padding: 1rem 0 1rem 1.5rem;
+    width: 60vw;
+    margin-bottom: 2rem;
+  }
+  .knowledge .title-knowledge {
+    display: none;
+  }
+  .knowledge .title-knowledge-mobile {
+    display: block;
+  }
+  .knowledge-content__item {
+    margin: 1rem 0;
+  }
+  .signature {
+    text-align: center;
+  }
+  .about-me .content-block {
+    margin: 2rem 0 0 0;
+    width: 100%;
+  }
+  .about-me .container-middle .image-block {
+    display: none;
+  }
+  .about-me-media {
+    text-align: center;
+    padding: 10px;
+  }
+  .title-contact {
+    margin: 0;
+  }
+  .contact-me__image-container img {
+    display: none;
+  }
+  .contact-me__input-container {
+    margin: 2rem 0;
+  }
+  .contact-me__input-container form {
+    max-width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-me__input-container--input textarea {
+    height: 120px;
+  }
+  .contact-me__input-container--input {
+    width: 100%;
+  }
+  .row {
+    display: grid;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contact-me__input-container--label, .contact-me__input-container--input, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
 }
 
 @media screen and (max-width: 540px) {
@@ -600,6 +680,10 @@ ul {
   .overlay span {
     font-size: 16px;
     letter-spacing: 1.5px;
+  }
+
+  .contact-me__input-container form {
+    max-width: 90vw;
   }
 }
 

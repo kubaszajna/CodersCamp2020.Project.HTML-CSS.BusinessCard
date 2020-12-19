@@ -12,10 +12,10 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./styles/normalize.css" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <title>Kuba Szajna</title>
+    <title>Jakub Szajna - Architect & Web Developer</title>
   </head>
 
   <body>
@@ -23,7 +23,7 @@
       <h1>kuba szajna</h1>
       <span>architect & web developer</span>
     </div>
-    <div id="main" class="scroll-container">
+    <div id="main" class="main">
       <section class="wrapper">
         <div class="nav">
           <div class="logo">
@@ -36,18 +36,26 @@
 
           <div class="menu-links">
             <ul>
-              <a href="#">
-                <li>home.</li>
-              </a>
-              <a href="#">
-                <li>about.</li>
-              </a>
-              <a href="">
-                <li>projects.</li>
-              </a>
-              <a href="#">
-                <li>contact.</li>
-              </a>
+              <li>
+                <a href="#main">
+                  <span>home.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#about-me">
+                  <span>about.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#project-architecture">
+                  <span>projects.</span>
+                </a>
+              </li>
+              <li>
+                <a href="#contact-me">
+                  <span>contact.</span>
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -89,7 +97,7 @@
     </div>
 
     <!-- About me -->
-    <div class="container about-me">
+    <div id="about-me" class="container about-me">
       <div class="container-width">
         <div class="container-middle">
           <div class="title-block title-project">
@@ -137,9 +145,12 @@
     </div>
 
     <!-- Knowledge Section -->
-    <div class="container knowledge">
+    <div id="knowledge" class="container knowledge">
       <div class="container-width">
         <div class="container-middle">
+          <div class="title-block title-knowledge title-knowledge-mobile">
+            <h3 class=""><span>My</span><br />Services</h3>
+          </div>
           <ul class="knowledge-content">
             <li class="knowledge-content__item">
               <div class="knowledge-content__item--left">
@@ -259,7 +270,7 @@
     <!-- <div class="container project-it"></div> -->
 
     <!-- Project Section -->
-    <div class="container project-architecture">
+    <div id="project-architecture" class="container project-architecture">
       <div class="container-width">
         <div class="container-middle">
           <div class="title-block title-project">
@@ -350,73 +361,75 @@
         </div>
       </div>
     </div>
-    <div class="container contact-me">
+
+    <!-- Contact me -->
+    <div id="contact-me" class="container contact-me">
       <div class="container-width">
         <div class="container-middle">
           <div class="title-block title-contact">
             <h3 class=""><span>Contact</span><br />me</h3>
           </div>
-          <div class="contact-me__image-contatainer">
-            <img src="./images/contact.jpg" alt="Contact">
+          <div class="contact-me__image-container">
+            <img src="./images/contact.jpg" alt="Contact" />
           </div>
           <div class="contact-me__input-container">
-          <form action="">
-            <div class="row">
-              <div class="contact-me__input-container--label">
-                <label for="fname">First Name</label>
+            <form action="">
+              <div class="row">
+                <div class="contact-me__input-container--label">
+                  <label for="fname">First Name</label>
+                </div>
+                <div class="contact-me__input-container--input">
+                  <input
+                    type="text"
+                    id="fname"
+                    name="firstname"
+                    placeholder="Your name.."
+                  />
+                </div>
               </div>
-              <div class="contact-me__input-container--input">
-                <input
-                  type="text"
-                  id="fname"
-                  name="firstname"
-                  placeholder="Your name.."
-                />
+              <div class="row">
+                <div class="contact-me__input-container--label">
+                  <label for="lname">Last Name</label>
+                </div>
+                <div class="contact-me__input-container--input">
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lastname"
+                    placeholder="Your last name.."
+                  />
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="contact-me__input-container--label">
-                <label for="lname">Last Name</label>
+              <div class="row">
+                <div class="contact-me__input-container--label">
+                  <label for="country">Country</label>
+                </div>
+                <div class="contact-me__input-container--input">
+                  <select id="country" name="country">
+                    <option value="australia">Poland</option>
+                    <option value="australia">Australia</option>
+                    <option value="canada">Canada</option>
+                    <option value="usa">USA</option>
+                  </select>
+                </div>
               </div>
-              <div class="contact-me__input-container--input">
-                <input
-                  type="text"
-                  id="lname"
-                  name="lastname"
-                  placeholder="Your last name.."
-                />
+              <div class="row">
+                <div class="contact-me__input-container--label">
+                  <label for="subject">Subject</label>
+                </div>
+                <div class="contact-me__input-container--input">
+                  <textarea
+                    id="subject"
+                    name="subject"
+                    placeholder="Write something.."
+                  ></textarea>
+                </div>
               </div>
-            </div>
-            <div class="row">
-              <div class="contact-me__input-container--label">
-                <label for="country">Country</label>
+              <div class="row submit-row">
+                <input type="submit" value="Submit" />
               </div>
-              <div class="contact-me__input-container--input">
-                <select id="country" name="country">
-                  <option value="australia">Poland</option>
-                  <option value="australia">Australia</option>
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
-                </select>
-              </div>
-            </div>
-            <div class="row">
-              <div class="contact-me__input-container--label">
-                <label for="subject">Subject</label>
-              </div>
-              <div class="contact-me__input-container--input">
-                <textarea
-                  id="subject"
-                  name="subject"
-                  placeholder="Write something.."
-                  style="height: 200px"
-                ></textarea>
-              </div>
-            </div>
-            <div class="row">
-              <input type="submit" value="Submit" />
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </div>
     </div>
