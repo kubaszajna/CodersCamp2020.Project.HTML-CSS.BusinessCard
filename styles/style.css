@@ -10,6 +10,8 @@
 
 html {
   scroll-behavior: smooth;
+  --yellow: #FFEB00;
+  --dark-gray: #222222;
 }
 
 body {
@@ -22,7 +24,7 @@ body {
 
 .container {
   width: 100%;
-  background-color: #222222;
+  background-color: var(--dark-gray);
   padding: 6rem 0;
 }
 
@@ -50,7 +52,7 @@ body {
 }
 
 .knowledge {
-  background-color: #FFEB00;
+  background-color: var(--yellow);
 }
 
 .knowledge-content {
@@ -67,7 +69,7 @@ body {
 }
 
 .knowledge-content__item--left {
-  background-color: #222222;
+  background-color: var(--dark-gray);
   border-radius: 50%;
   padding: 18px;
   width: 30px;
@@ -80,7 +82,7 @@ body {
 }
 
 .knowledge .title-knowledge {
-  background-color: #222222;
+  background-color: var(--dark-gray);
   color: #fff;
 }
 
@@ -99,7 +101,7 @@ body {
 }
 
 .contact-me {
-  background-color: #222222;
+  background-color: var(--dark-gray);
   padding: 0 0;
 }
 
@@ -142,8 +144,8 @@ label {
 }
 
 input[type=submit] {
-  background-color: #FFEB00;
-  color: #222222;
+  background-color: var(--yellow);
+  color: var(--dark-gray);
   padding: 12px 20px;
   border: none;
   cursor: pointer;
@@ -155,7 +157,7 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #FFEB00;
+  background-color: var(--yellow);
 }
 
 .contact-me__input-container--label {
@@ -186,7 +188,7 @@ ul {
   list-style: none;
 }
 
-.nav {
+.nav-container {
   width: 200px;
   height: 100vh;
   display: flex;
@@ -196,7 +198,7 @@ ul {
 
 .logo {
   flex: 0 0 50%;
-  background: #FFEB00;
+  background: var(--yellow);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -326,12 +328,12 @@ ul {
 
 .title-block {
   min-width: 110px;
-  background: #FFEB00;
+  background: var(--yellow);
   padding: 20px 0 0 12px;
 }
 
 .title-project {
-  color: #222222;
+  color: var(--dark-gray);
 }
 
 .about-me .content-block {
@@ -358,18 +360,18 @@ ul {
   top: 70%;
   right: 0;
   transform: translateY(-50%);
-  background: #FFEB00;
+  background: var(--yellow);
   padding: 30px 180px 30px 30px;
   z-index: 20;
 }
 
 .watchnow a {
   text-decoration: none;
-  color: #222222;
+  color: var(--dark-gray);
   font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
-  border-bottom: 3px solid #222222;
+  border-bottom: 3px solid var(--dark-gray);
   padding-bottom: 5px;
 }
 
@@ -399,7 +401,7 @@ ul {
 }
 
 .about-me-media ul li {
-  background: #FFEB00;
+  background: var(--yellow);
   margin-right: 1rem;
 }
 
@@ -419,7 +421,7 @@ ul {
 }
 
 .media ul li:hover {
-  background: #FFEB00;
+  background: var(--yellow);
 }
 
 .ellipse-container {
@@ -463,7 +465,7 @@ ul {
   width: 93%;
   height: 93%;
   border-width: 10px;
-  border-color: #FFEB00 transparent;
+  border-color: var(--yellow) transparent;
   transform: rotate(-45deg);
   top: 12px;
   left: 12px;
@@ -525,7 +527,7 @@ ul {
 .circle2::after {
   width: 40px;
   height: 40px;
-  background: #FFEB00;
+  background: var(--yellow);
 }
 
 .circle1 span,
@@ -548,7 +550,7 @@ ul {
   position: fixed;
   width: 100%;
   height: 100vh;
-  background: #FFEB00;
+  background: var(--yellow);
   top: 0%;
   z-index: 1;
   display: flex;
@@ -567,7 +569,7 @@ ul {
   letter-spacing: 3px;
 }
 
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1200px) {
   .main {
     background-color: #D0D0D0;
     background-color: linear-gradient(135deg, rgba(166,166,166,1) 25%, rgba(217,217,217,1) 75%);
@@ -579,10 +581,6 @@ ul {
   }
   .container {
     padding: 3rem 0;
-  }
-  .container-width {
-    margin-left: 20px;
-    margin-right: 20px;
   }
   .scrolldown {
     display: none;
@@ -666,14 +664,27 @@ ul {
   }
 }
 
+@media screen and (max-width: 992px) {
+  .container-width {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  input[type=submit] {
+    margin-left: auto;
+    margin-right: auto;
+    width: 120px;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .contact-me__input-container--label, .contact-me__input-container--input, input[type=submit] {
     width: 100%;
     margin-top: 0;
   }
-}
 
-@media screen and (max-width: 540px) {
   .overlay h1 {
     font-size: 40px;
     letter-spacing: 10px;
@@ -686,18 +697,6 @@ ul {
 
   .contact-me__input-container form {
     max-width: 90vw;
-  }
-}
-
-@keyframes slideOut {
-  0% {
-    transform: translateY(0%);
-  }
-  40% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-120%);
   }
 }
 
@@ -717,6 +716,18 @@ ul {
   animation-timing-function: linear;
 }
 
+@keyframes slideOut {
+  0% {
+    transform: translateY(0%);
+  }
+  40% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-120%);
+  }
+}
+
 @keyframes spin {
   from {
       transform:rotate(0deg);
@@ -725,18 +736,3 @@ ul {
       transform:rotate(360deg);
   }
 }
-
-/* Extra small devices (phones, 600px and down) */
-/* @media only screen and (max-width: 600px) {...} */
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-/* @media only screen and (min-width: 600px) {...} */
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {...} */
-
-/* Large devices (laptops/desktops, 992px and up) */
-/* @media only screen and (min-width: 992px) {...} */
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-/* @media only screen and (min-width: 1200px) {...} */
